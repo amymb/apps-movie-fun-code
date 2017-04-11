@@ -3,18 +3,18 @@
 set -ex
 
 pushd movie-fun
-  echo "Packaging jar"
+  echo "Packaging war"
   ./mvnw clean package -DskipTests
 popd
 
-jar_count=`find movie-fun/target -type f -name *.jar | wc -l`
+war_count=`find movie-fun/target -type f -name *.war | wc -l`
 
-if [ $jar_count -gt 1 ]; then
-  echo "More than one jar found.  Exiting"
+if [ $war_count -gt 1 ]; then
+  echo "More than one war found.  Exiting"
   exit 1
 fi
 
-find movie-fun/target -type f -name *.jar -exec cp "{}" package-output/movie-fun.jar \;
+find movie-fun/target -type f -name *.war -exec cp "{}" package-output/movie-fun.war \;
 
 echo "Done packaging"
 
