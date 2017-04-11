@@ -11,7 +11,7 @@ fi
 
 pushd movie-fun
   echo "running smoke tests for app deployed at $MOVIE_FUN_URL"
-  smoke-tests/bin/test $MOVIE_FUN_URL
+  MOVIE_FUN_URL=$MOVIE_FUN_URL ./mvnw test
 popd
 
 exit 0

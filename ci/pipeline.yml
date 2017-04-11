@@ -35,6 +35,6 @@ jobs:
     trigger: true
     passed: [build]
   - task: smoke_test
-    file: smoke-test/ci/tasks/smoke-test.yml
+    file: movie-fun/ci/tasks/smoke-test.yml
     params:
-      SMOKE_TEST_URL: movie-fun-bertken-01.cfapps.io
+      MOVIE_FUN_URL: movie-fun-bertken-02.cfapps.io
