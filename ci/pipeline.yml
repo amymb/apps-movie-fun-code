@@ -12,8 +12,8 @@ resources:
     api: api.run.pivotal.io
     username: {{cf-user}}
     password: {{cf-password}}
-    organization: staging
-    space: Pivotal-Enablement
+    organization: Pivotal-Enablement
+    space: staging
     skip_cert_check: true
 
 jobs:
